@@ -30,6 +30,7 @@ export class UsersComponent implements OnInit{
   filterUserData(inputText: string){
     this.Users = this.originalUsers.filter((user: any) =>
     user.name.toLowerCase().includes(inputText.toLocaleLowerCase()) ||
+    user.email.toLowerCase().includes(inputText.toLocaleLowerCase()) ||
     user.company?.name?.toLowerCase().includes(inputText.toLocaleLowerCase()))
   }
 }
