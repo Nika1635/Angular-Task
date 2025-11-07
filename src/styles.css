@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+}
+
+.content{
+    display: flex;
+    align-self: center;
+    width: 50%;
+}
+
+@media only screen and (max-width: 1024px) {
+  .content{
+    width: 80%;
+  }
+} 
