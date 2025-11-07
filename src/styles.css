@@ -8,8 +8,10 @@
 
 .content{
     display: flex;
-    align-self: center;
+    justify-self: center;
+    justify-content: center;
     width: 50%;
+    background-color: aqua;
 }
 
 @media only screen and (max-width: 1024px) {

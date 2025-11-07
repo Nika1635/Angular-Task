@@ -1,0 +1,29 @@
+td{
+    font-size: 12px;
+}
+
+table, th, td {
+  border: 1px solid #ccc;
+}
+
+
+th, td {
+  padding: 10px; /* space inside cells */
+  text-align: left; /* aligns text inside cells */
+}
+
+
+@media only screen and (max-width: 740px) {
+  th{
+    font-size: 12px;
+  }
+  
+  td{
+    font-size: 8px;
+  }
+
+  th, td {
+  padding: 2px;
+  text-align: left;
+}
+} 

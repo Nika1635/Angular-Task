@@ -4,13 +4,46 @@
     align-items: center;
     width: 150px;
     height: 100vh;
-    background-color: rgb(204, 204, 204);
+    background-color: #4a90e2;
+    gap: 10px;
+    padding-top: 10px;
 }
 
 .sidebar > a{
+    transition: 0.3s;
     text-decoration: none;
+    font-size: 16px;
+    padding: 8px;
+    border-radius: 10px;
+    color: #ffffff;
+    border: 1px solid transparent;
+}
+
+.sidebar > a:hover{
+    transition: 0.5s;
+    text-decoration: none;
+    color: #f2994a;
+    border-color: #f2994a;
 }
 
 .sidebar > a.active{
-    color: red;
+    color: white;
+    background-color: #f2994a;
+    border-color: #f2994a;
+}
+
+@media only screen and (max-width: 740px) {
+  .sidebar{
+    width: 100px;
+  }
+
+  .sidebar > a{
+    transition: 0.3s;
+    text-decoration: none;
+    font-size: 12px;
+    padding: 4px;
+    border-radius: 10px;
+    color: #ffffff;
+    border: 1px solid transparent;
+}
 }
