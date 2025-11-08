@@ -20,4 +20,14 @@
   max-width: 90%;
   max-height: 80%;
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+@media only screen and (max-width: 480px) {
+  .modal-content > h3 {
+    font-size: 15px;
+  }
 }
