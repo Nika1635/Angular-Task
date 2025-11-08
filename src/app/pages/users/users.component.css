@@ -18,6 +18,8 @@ table, th, td {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
+  box-sizing: border-box;
+  scrollbar-width: thin;
 }
 
 
@@ -53,6 +55,10 @@ th, td {
   th{
     font-size: 10px;
   }
+
+  .table-section{
+    padding-left: 10px;
+  } 
   
   td{
     font-size: 6px;
