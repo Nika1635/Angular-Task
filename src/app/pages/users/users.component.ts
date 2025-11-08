@@ -3,27 +3,40 @@ import { UserService } from '../../core/services/user/user.service';
 import { SearchComponent } from '../../core/components/search/search.component';
 import { PostService } from '../../core/services/post/post.service';
 import { FooterComponent } from "../../core/components/footer/footer.component";
+import { ModalComponent } from '../../core/components/modal/modal.component';
 
 @Component({
   selector: 'app-users',
-  imports: [SearchComponent, FooterComponent],
+  imports: [SearchComponent, ModalComponent],
   templateUrl: './users.component.html',
   styleUrl: './users.component.css'
 })
 export class UsersComponent implements OnInit{
   constructor(private userData: UserService, private postData: PostService){}
 
-    ngOnInit(): void {
-      this.getUserData()
-      this.postUsers()
-    }
+  ngOnInit(): void {
+    this.getUserData()
+    this.postUsers()
+  }
 
-    public users: any = []
-    private originalUsers: any = []
+  public users: any = []
+  private originalUsers: any = []
 
-    public posts: any = []
-    public postUserCombine: any = []
+  public posts: any = []
+  public postUserCombine: any = []
 
+  public selectedPost: any = null
+  public isModalOpen: boolean = false
+
+  openPostDetails(post: any) {
+    this.selectedPost = post
+    this.isModalOpen = true
+  }
+
+  closeModal() {
+    this.isModalOpen = false
+    this.selectedPost = null
+  }
 
   getUserData(){
     this.userData.getUsers().subscribe(data => {
@@ -52,7 +65,6 @@ export class UsersComponent implements OnInit{
       }
     })
   }
-
 
   //  გავაერთიანე ორი ობიექტი
   combinePostsAndUsers(){

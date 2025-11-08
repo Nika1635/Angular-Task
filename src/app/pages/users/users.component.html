@@ -44,10 +44,17 @@
                         <td>{{item.userName}}</td>
                         <td>{{item.title}}</td>
                         <div class="button-hero">
-                            <button class="other-btn">დეტალურად</button>
+                            <button class="other-btn" (click)="openPostDetails(item)">დეტალურად</button>
                         </div>
                     </tr>
-                }
+                    }
+                    @if (isModalOpen) {
+                        <app-modal [title]="'პოსტის დეტალურად'" (closed)="closeModal()">
+                            <p><strong>მომხმარებელი:</strong> {{ selectedPost?.userName }}</p>
+                            <p><strong>პოსტი:</strong> {{ selectedPost?.title }}</p>
+                            <p><strong>აღწერა:</strong> {{ selectedPost?.body }}</p>
+                        </app-modal>
+                    }
             </tbody>
         </table>
     </section>
