@@ -2,12 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../core/services/user/user.service';
 import { SearchComponent } from '../../core/components/search/search.component';
 import { PostService } from '../../core/services/post/post.service';
-import { FooterComponent } from "../../core/components/footer/footer.component";
 import { ModalComponent } from '../../core/components/modal/modal.component';
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-users',
-  imports: [SearchComponent, ModalComponent],
+  imports: [SearchComponent, ModalComponent, RouterLink],
   templateUrl: './users.component.html',
   styleUrl: './users.component.css'
 })

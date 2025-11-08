@@ -1,1 +1,8 @@
-<p>todos works!</p>
+<section class="content">
+    <h2>{{name}} Todo List</h2>
+    <ol>
+        @for (item of todoList; track $index) {
+            <li [class.completed]="item.completed">{{item.title}}</li>
+        }
+    </ol>
+</section>
