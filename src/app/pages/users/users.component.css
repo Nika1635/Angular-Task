@@ -6,7 +6,6 @@ table, th, td {
   border: 1px solid #ccc;
 }
 
-
 .table-section{
   display: flex;
   flex-direction: column;

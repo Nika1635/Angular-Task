@@ -1,0 +1,18 @@
+<section class="content">
+    <div class="wheel-container">
+        <div class="wheel" [style.transform]="'rotate(' + rotation + 'deg)'" style="transition: transform 2s ease-out;">
+            @for (item of [1,2,3,4,5,6,7,8,9,10]; track $index) {
+                <div class="sector" [style.transform]="'rotate(' + (item * 36) + 'deg)'">
+                    {{ item }}
+                </div>
+            }
+        </div>
+        <i class="fa-solid fa-arrow-up"></i>
+    </div>
+    <input type="number" placeholder="1-10"  [(ngModel)]="num">
+    <button (click)="spin()">დაატრიალე</button>
+
+    @if (error) {
+        <div>{{ error }}</div>
+    }
+</section>
