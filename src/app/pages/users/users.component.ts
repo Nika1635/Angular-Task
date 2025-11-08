@@ -52,6 +52,8 @@ export class UsersComponent implements OnInit{
     })
   }
 
+
+  //  გავაერთიანე ორი ობიექტი
   combinePostsAndUsers(){
     this.posts.forEach((post: any) => {
       const user = this.users.find((u: any) => u.id === post.userId)

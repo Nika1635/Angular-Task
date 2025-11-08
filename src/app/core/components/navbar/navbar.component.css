@@ -57,5 +57,25 @@
     border-radius: 10px;
     color: #ffffff;
     border: 1px solid transparent;
+  }
 }
+
+@media only screen and (max-width: 480px) {
+  .nav-hero{
+    width: 80px;
+  }
+
+  .sidebar{
+    width: 80px;
+  }
+
+  .sidebar > a{
+    transition: 0.3s;
+    text-decoration: none;
+    font-size: 10px;
+    padding: 2px;
+    border-radius: 10px;
+    color: #ffffff;
+    border: 1px solid transparent;
+  }
 }

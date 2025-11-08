@@ -5,20 +5,24 @@
     <section class="table-section">
         <h2>მომხმარებლები</h2>
         <table>
-            <tr>
-                <th>სახელი</th>
-                <th>ტელეფონის ნომერი</th>
-                <th>მეილი</th>
-                <th>კომპანიის დასახელება</th>
-            </tr>
-            @for (item of users; track $index) {
+            <thead>
                 <tr>
-                    <td>{{item.name}}</td>
-                    <td>{{item.phone}}</td>
-                    <td>{{item.email}}</td>
-                    <td>{{item.company.name}}</td>
+                    <th>სახელი</th>
+                    <th>ტელეფონის ნომერი</th>
+                    <th>მეილი</th>
+                    <th>კომპანიის დასახელება</th>
                 </tr>
-            }
+            </thead>
+            <tbody>
+                @for (item of users; track $index) {
+                    <tr>
+                        <td>{{item.name}}</td>
+                        <td>{{item.phone}}</td>
+                        <td>{{item.email}}</td>
+                        <td>{{item.company.name}}</td>
+                    </tr>
+                }
+            </tbody>
         </table>
     </section>
     <section class="table-section">
