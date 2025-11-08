@@ -6,10 +6,22 @@ table, th, td {
   border: 1px solid #ccc;
 }
 
+.table-section{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
 
 th, td {
-  padding: 10px; /* space inside cells */
-  text-align: left; /* aligns text inside cells */
+  padding: 10px;
+  text-align: left;
+}
+
+.content{
+  gap: 30px;
+  padding-bottom: 10px;
 }
 
 

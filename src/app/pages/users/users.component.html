@@ -11,7 +11,7 @@
                 <th>მეილი</th>
                 <th>კომპანიის დასახელება</th>
             </tr>
-            @for (item of Users; track $index) {
+            @for (item of users; track $index) {
                 <tr>
                     <td>{{item.name}}</td>
                     <td>{{item.phone}}</td>
@@ -25,17 +25,13 @@
         <h2>პოსტები</h2>
         <table>
             <tr>
-                <th>სახელი</th>
-                <th>ტელეფონის ნომერი</th>
-                <th>მეილი</th>
-                <th>კომპანიის დასახელება</th>
+                <th>მომხმარებელი</th>
+                <th>პოსტი</th>
             </tr>
-            @for (item of Users; track $index) {
+            @for (item of posts; track $index) {
                 <tr>
-                    <td>{{item.name}}</td>
-                    <td>{{item.phone}}</td>
-                    <td>{{item.email}}</td>
-                    <td>{{item.company.name}}</td>
+                    <td>{{item.userName}}</td>
+                    <td>{{item.title}}</td>
                 </tr>
             }
         </table>
