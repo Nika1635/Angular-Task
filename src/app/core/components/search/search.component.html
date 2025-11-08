@@ -1,4 +1,4 @@
 <div class="search">
-    <input type="text" placeholder="სახელი, გვარი, ელფოსტა" [(ngModel)] = "inputText">
+    <input type="text" (keydown.enter)="sendInputData()" placeholder="სახელი, გვარი, ელფოსტა" [(ngModel)] = "inputText">
     <i class="fa-solid fa-magnifying-glass" (click)="sendInputData()"></i>
 </div>

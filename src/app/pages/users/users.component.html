@@ -1,9 +1,9 @@
 <section class="content">
-    <app-search (dataEmitter)="filterUserData($event)"></app-search>
     <button (click)="getUserData()">reset</button>
 
     <section class="table-section">
         <h2>მომხმარებლები</h2>
+        <app-search (dataEmitter)="filterUserData($event)"></app-search>
         <table>
             <thead>
                 <tr>

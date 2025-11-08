@@ -13,6 +13,13 @@
     height: 100%;
     border: 1px #4a90e2 solid;
     padding: 4px;
+    transition: 0.3s;
+    color: white;
+    cursor: pointer;
+}
+
+.search > i:hover {
+    color: #f2994a;
 }
 
 .search > input{
