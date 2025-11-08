@@ -2,10 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../core/services/user/user.service';
 import { SearchComponent } from '../../core/components/search/search.component';
 import { PostService } from '../../core/services/post/post.service';
+import { FooterComponent } from "../../core/components/footer/footer.component";
 
 @Component({
   selector: 'app-users',
-  imports: [SearchComponent],
+  imports: [SearchComponent, FooterComponent],
   templateUrl: './users.component.html',
   styleUrl: './users.component.css'
 })

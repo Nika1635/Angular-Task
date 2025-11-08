@@ -20,6 +20,10 @@
                         <td>{{item.phone}}</td>
                         <td>{{item.email}}</td>
                         <td>{{item.company.name}}</td>
+                        <div class="button-hero">
+                            <button>პოსტები</button>
+                            <button>Todo list</button>
+                        </div>
                     </tr>
                 }
             </tbody>
@@ -28,16 +32,23 @@
     <section class="table-section">
         <h2>პოსტები</h2>
         <table>
-            <tr>
-                <th>მომხმარებელი</th>
-                <th>პოსტი</th>
-            </tr>
-            @for (item of posts; track $index) {
+            <thead>
                 <tr>
-                    <td>{{item.userName}}</td>
-                    <td>{{item.title}}</td>
+                    <th>მომხმარებელი</th>
+                    <th>პოსტი</th>
                 </tr>
-            }
+            </thead>
+            <tbody>
+                @for (item of posts; track $index) {
+                    <tr>
+                        <td>{{item.userName}}</td>
+                        <td>{{item.title}}</td>
+                        <div class="button-hero">
+                            <button class="other-btn">დეტალურად</button>
+                        </div>
+                    </tr>
+                }
+            </tbody>
         </table>
     </section>
 </section>
