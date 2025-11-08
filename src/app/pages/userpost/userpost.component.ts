@@ -3,6 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 import { UserService } from '../../core/services/user/user.service';
 import { PostService } from '../../core/services/post/post.service';
 import { CardComponent } from '../../core/components/card/card.component';
+import { PostInterface } from '../../core/interfaces/post-interface';
+import { TodoInterface } from '../../core/interfaces/todo-interface';
 
 @Component({
   selector: 'app-todos',
@@ -17,8 +19,8 @@ export class UserpostComponent implements OnInit {
     this.getId()
   }
 
-  public posts:any = []
-  private id: any = null
+  public posts:PostInterface[] = []
+  private id: number = 0
 
   public name: string = ''
 
@@ -31,15 +33,15 @@ export class UserpostComponent implements OnInit {
     })
   }
 
-  getName(param: any){
+  getName(param: number){
     this.getuser.getUsersById(param).subscribe((item) => {
       this.name = item.name
     })
   }
 
-  getPosts(user: any) {
-  this.postData.getPosts().subscribe((item: any) => {
-    this.posts = item.filter((todo: any) => todo.userId === user)
+  getPosts(user: number) {
+  this.postData.getPosts().subscribe((item: PostInterface[]) => {
+    this.posts = item.filter((todo) => todo.userId === user)
     console.log(this.posts)
   })
 }

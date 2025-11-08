@@ -4,6 +4,8 @@ import { SearchComponent } from '../../core/components/search/search.component';
 import { PostService } from '../../core/services/post/post.service';
 import { ModalComponent } from '../../core/components/modal/modal.component';
 import { RouterLink } from "@angular/router";
+import { UsersInterface } from '../../core/interfaces/users-interface';
+import { PostInterface } from '../../core/interfaces/post-interface';
 
 @Component({
   selector: 'app-users',
@@ -19,23 +21,23 @@ export class UsersComponent implements OnInit{
     this.postUsers()
   }
 
-  public users: any = []
-  private originalUsers: any = []
+  public users: UsersInterface[] = []
+  private originalUsers: UsersInterface[] = []
 
   public posts: any = []
-  public postUserCombine: any = []
+  public postUserCombine: PostInterface[] = []
 
   public selectedPost: any = null
   public isModalOpen: boolean = false
 
-  openPostDetails(post: any) {
+  openPostDetails(post: number) {
     this.selectedPost = post
     this.isModalOpen = true
   }
 
   closeModal() {
     this.isModalOpen = false
-    this.selectedPost = null
+    this.selectedPost = NaN
   }
 
   getUserData(){

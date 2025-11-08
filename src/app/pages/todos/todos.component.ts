@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { TodoService } from '../../core/services/todo/todo.service';
 import { ActivatedRoute } from '@angular/router';
 import { UserService } from '../../core/services/user/user.service';
+import { TodoInterface } from '../../core/interfaces/todo-interface';
 
 @Component({
   selector: 'app-todos',
@@ -16,8 +17,8 @@ export class TodosComponent implements OnInit {
     this.getId()
   }
 
-  public todoList:any = []
-  private id: any = null
+  public todoList:TodoInterface[] = []
+  private id: number = 0
 
   public name: string = ''
 
@@ -30,15 +31,15 @@ export class TodosComponent implements OnInit {
     })
   }
 
-  getName(param: any){
+  getName(param: number){
     this.getuser.getUsersById(param).subscribe((item) => {
       this.name = item.name
     })
   }
 
-  getTodoList(user: any) {
-  this.todoData.todoGet().subscribe((item: any[]) => {
-    this.todoList = item.filter((todo: any) => todo.userId === user)
+  getTodoList(user: number) {
+  this.todoData.todoGet().subscribe((item: TodoInterface[]) => {
+    this.todoList = item.filter((todo: TodoInterface) => todo.userId === user)
     console.log(this.todoList)
   })
 }

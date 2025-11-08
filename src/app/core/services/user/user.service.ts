@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { UsersInterface } from '../../interfaces/users-interface';
 
 @Injectable({
   providedIn: 'root'
@@ -9,11 +10,11 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
-  getUsers(){
-    return this.http.get('https://jsonplaceholder.typicode.com/users')
+  getUsers(): Observable<UsersInterface[]>{
+    return this.http.get<UsersInterface[]>('https://jsonplaceholder.typicode.com/users')
   }
 
-  getUsersById(id: number): Observable<any>{
-    return this.http.get<any>(`https://jsonplaceholder.typicode.com/users/${id}`)
+  getUsersById(id: number): Observable<UsersInterface>{
+    return this.http.get<UsersInterface>(`https://jsonplaceholder.typicode.com/users/${id}`)
   }
 }
