@@ -21,7 +21,7 @@
                         <td>{{item.email}}</td>
                         <td>{{item.company.name}}</td>
                         <div class="button-hero">
-                            <button>პოსტები</button>
+                            <button [routerLink]="['/userposts', item.id]">პოსტები</button>
                             <button [routerLink]="['/todos', item.id]">Todo list</button>
                         </div>
                     </tr>

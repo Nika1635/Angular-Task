@@ -1,0 +1,9 @@
+<section class="content">
+    <h2>{{name}} posts</h2>
+    <section class="card-section">
+        @for (item of posts; track $index) {
+            <app-card class="card" [postName]="item.title" [postDescription]="item.body"></app-card>
+        }
+    
+    </section>
+</section>
