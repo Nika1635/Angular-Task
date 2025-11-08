@@ -1,36 +1,43 @@
 <section class="content">
     <app-search (dataEmitter)="filterUserData($event)"></app-search>
     <button (click)="getUserData()">reset</button>
-    <table>
-        <tr>
-            <th>სახელი</th>
-            <th>ტელეფონის ნომერი</th>
-            <th>მეილი</th>
-            <th>კომპანიის დასახელება</th>
-        </tr>
-        @for (item of Users; track $index) {
+
+    <section class="table-section">
+        <h2>მომხმარებლები</h2>
+        <table>
             <tr>
-                <td>{{item.name}}</td>
-                <td>{{item.phone}}</td>
-                <td>{{item.email}}</td>
-                <td>{{item.company.name}}</td>
+                <th>სახელი</th>
+                <th>ტელეფონის ნომერი</th>
+                <th>მეილი</th>
+                <th>კომპანიის დასახელება</th>
             </tr>
-        }
-    </table>
-    <table>
-        <tr>
-            <th>სახელი</th>
-            <th>ტელეფონის ნომერი</th>
-            <th>მეილი</th>
-            <th>კომპანიის დასახელება</th>
-        </tr>
-        @for (item of Users; track $index) {
+            @for (item of Users; track $index) {
+                <tr>
+                    <td>{{item.name}}</td>
+                    <td>{{item.phone}}</td>
+                    <td>{{item.email}}</td>
+                    <td>{{item.company.name}}</td>
+                </tr>
+            }
+        </table>
+    </section>
+    <section class="table-section">
+        <h2>პოსტები</h2>
+        <table>
             <tr>
-                <td>{{item.name}}</td>
-                <td>{{item.phone}}</td>
-                <td>{{item.email}}</td>
-                <td>{{item.company.name}}</td>
+                <th>სახელი</th>
+                <th>ტელეფონის ნომერი</th>
+                <th>მეილი</th>
+                <th>კომპანიის დასახელება</th>
             </tr>
-        }
-    </table>
+            @for (item of Users; track $index) {
+                <tr>
+                    <td>{{item.name}}</td>
+                    <td>{{item.phone}}</td>
+                    <td>{{item.email}}</td>
+                    <td>{{item.company.name}}</td>
+                </tr>
+            }
+        </table>
+    </section>
 </section>
