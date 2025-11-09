@@ -5,7 +5,8 @@ footer{
     padding: 10px;
     width: 100%;
     background-color: #4a90e2;
-    height: 100px;
+    height: 50px;
+    margin-top: auto;
 }
 
 footer > p{

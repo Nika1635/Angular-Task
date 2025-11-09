@@ -4,6 +4,19 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Nunito", sans-serif;
+    
+}
+
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 10px;
 }
 
 .content{
@@ -14,6 +27,7 @@
     justify-content: center;
     align-items: center;
     width: 50%;
+    height: 100%;
 }
 
 td{
