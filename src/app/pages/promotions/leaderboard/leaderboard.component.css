@@ -1,0 +1,14 @@
+.button-hero{
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.active{
+    transition: 0.5s;
+    text-decoration: none;
+    color: white;
+    background-color: #f2994a;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+}

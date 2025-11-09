@@ -1,0 +1,27 @@
+<section class="table-section">
+    <div class="button-hero">
+        @for (item of weekTypes; track $index) {
+            <button (click)="filterWeek(item)" [class.active]="activeWeek === item">{{item}}</button>
+        }
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>customerId</th>
+                <th>loginName</th>
+                <th>place</th>
+                <th>week</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (item of filteredData; track $index) {
+                <tr>
+                    <td>{{item.customerId}}</td>
+                    <td>{{item.loginName}}</td>
+                    <td>{{item.place}}</td>
+                    <td>{{item.week}}</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</section>

@@ -7,7 +7,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
     <div class="modal-content">
       <h3>{{ title }}</h3>
       <ng-content></ng-content>
-      <button (click)="close()">Close</button>
+      <button (click)="close()">დახურვა</button>
     </div>
   `,
   styleUrls: ['./modal.component.css']
